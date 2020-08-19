@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:janken/battle/battle.dart';
+import 'package:janken/app/storyboard.dart';
+import 'package:storyboard/storyboard.dart';
 
 void main() {
   runApp(MyApp());
 }
+
+MaterialApp material = MaterialApp(
+    home: Storyboard([
+  ButtonsListStory(),
+]));
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
