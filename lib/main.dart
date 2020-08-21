@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:janken/app/storyboard.dart';
+import 'package:janken/domain/counter.dart';
 import 'package:janken/template/battle/battle.dart';
+import 'package:provider/provider.dart';
 import 'package:storyboard/storyboard.dart';
 
 void main() {
@@ -26,7 +28,10 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'じゃんけん'),
+      home: ChangeNotifierProvider<Counter>(
+        create: (context) => Counter(),
+        child: MyHomePage('じゃんけん'),
+      ),
     );
   }
 }

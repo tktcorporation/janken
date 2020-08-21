@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 class CountText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final _counter = Provider.of<Counter>(context);
     return Container(
       child: Row(
         // <Widget> is the type of items in the list.
@@ -14,7 +13,7 @@ class CountText extends StatelessWidget {
             'You have pushed the button this many times:',
           ),
           Text(
-            '${_counter.value}',
+            context.select((Counter counter) => counter).value.toString(),
             style: Theme.of(context).textTheme.headline4,
           ),
         ],
