@@ -3,6 +3,8 @@ import 'package:janken/domain/counter.dart';
 import 'package:provider/provider.dart';
 
 class CountText extends StatelessWidget {
+  const CountText(this._counter);
+  final Counter _counter;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,7 +15,7 @@ class CountText extends StatelessWidget {
             'You have pushed the button this many times:',
           ),
           Text(
-            context.select((Counter counter) => counter).value.toString(),
+            _counter.value.toString(),
             style: Theme.of(context).textTheme.headline4,
           ),
         ],
