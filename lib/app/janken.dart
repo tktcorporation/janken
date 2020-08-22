@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:janken/controller/counterController.dart';
 import 'package:janken/domain/counter.dart';
 import 'package:janken/template/battle/battle.dart';
 import 'package:provider/provider.dart';
@@ -17,8 +18,8 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ChangeNotifierProvider<Counter>(
-        create: (context) => Counter(),
+      home: ChangeNotifierProvider<CounterController>(
+        create: (context) => CounterController(Counter()),
         child: BattlePage('じゃんけん'),
       ),
     );
