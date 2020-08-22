@@ -7,9 +7,9 @@ class CountText extends StatelessWidget {
   final Counter _counter;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Row(
-        // <Widget> is the type of items in the list.
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
             'You have pushed the button this many times:',

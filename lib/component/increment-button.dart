@@ -9,17 +9,10 @@ class IncrementButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Row(
-        // <Widget> is the type of items in the list.
-        children: <Widget>[
-          FloatingActionButton(
-            onPressed: this._increment,
-            tooltip: 'Increment',
-            child: Icon(Icons.add),
-          ),
-        ],
-      ),
+    return FloatingActionButton(
+      onPressed: this._increment,
+      tooltip: 'Increment',
+      child: Icon(Icons.add),
     );
   }
 }
