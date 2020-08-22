@@ -53,7 +53,7 @@ class BattlePage extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: IncrementButton(context.read<Counter>().increment),
+      floatingActionButton: IncrementButton(context.watch<Counter>().increment),
     );
   }
 }
