@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       ),
       home: ChangeNotifierProvider<Counter>(
         create: (context) => Counter(),
-        child: MyHomePage('じゃんけん'),
+        child: BattlePage('じゃんけん'),
       ),
     );
   }

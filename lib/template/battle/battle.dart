@@ -4,7 +4,7 @@ import 'package:janken/component/increment-button.dart';
 import 'package:janken/domain/counter.dart';
 import 'package:provider/provider.dart';
 
-class MyHomePage extends StatelessWidget {
+class BattlePage extends StatelessWidget {
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
   // how it looks.
@@ -14,7 +14,7 @@ class MyHomePage extends StatelessWidget {
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
 
-  MyHomePage(this._title);
+  BattlePage(this._title);
   final String _title;
 
   @override
@@ -49,12 +49,11 @@ class MyHomePage extends StatelessWidget {
             Text(
               'You have pushed the button this many times:',
             ),
-            CountText()
+            CountText(context.select((Counter counter) => counter))
           ],
         ),
       ),
-      floatingActionButton: IncrementButton(
-          context.select((Counter counter) => counter).increment),
+      floatingActionButton: IncrementButton(context.read<Counter>().increment),
     );
   }
 }
