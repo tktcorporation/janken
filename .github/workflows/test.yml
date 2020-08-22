@@ -1,4 +1,4 @@
-name: "Issue Links"
+name: "Test"
 on:
   pull_request:
 
@@ -10,7 +10,8 @@ jobs:
       - uses: actions/checkout@v1
       - uses: subosito/flutter-action@v1
         with:
-          flutter-version: "1.21.0-10.0.pre.113"
+          flutter-version: "1.20.2"
+          channel: "master"
       - run: flutter config --enable-web
       - run: flutter pub get
       - run: flutter test
