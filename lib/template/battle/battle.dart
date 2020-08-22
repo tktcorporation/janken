@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:janken/component/count-text.dart';
 import 'package:janken/component/increment-button.dart';
-import 'package:janken/domain/counter.dart';
+import 'package:janken/controller/counterController.dart';
 import 'package:provider/provider.dart';
 
 class BattlePage extends StatelessWidget {
@@ -18,11 +18,13 @@ class BattlePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            CountText(context.select((Counter counter) => counter))
+            CountText(context
+                .select((CounterController counterc) => counterc.getCount()))
           ],
         ),
       ),
-      floatingActionButton: IncrementButton(context.watch<Counter>().increment),
+      floatingActionButton:
+          IncrementButton(context.watch<CounterController>().increment),
     );
   }
 }
