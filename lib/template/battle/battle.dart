@@ -46,9 +46,6 @@ class BattlePage extends StatelessWidget {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
             CountText(context.select((Counter counter) => counter))
           ],
         ),
