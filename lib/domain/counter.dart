@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Counter with ChangeNotifier {
+class Counter extends ChangeNotifier {
   int _value = 0;
 
   int get value => _value;
