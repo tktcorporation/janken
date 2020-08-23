@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:janken/controller/counterController.dart';
-import 'package:janken/domain/counter.dart';
-import 'package:janken/template/battle/battle.dart';
-import 'package:provider/provider.dart';
+import 'package:janken/component/template/battle/battle.dart';
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
