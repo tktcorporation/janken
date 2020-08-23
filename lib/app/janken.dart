@@ -18,10 +18,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ChangeNotifierProvider<CounterController>(
-        create: (context) => CounterController(Counter()),
-        child: BattlePage('じゃんけん'),
-      ),
+      home: BattlePage('じゃんけん'),
     );
   }
 }
