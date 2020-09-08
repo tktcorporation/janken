@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:janken/component/count-text.dart';
-import 'package:janken/component/increment-button.dart';
+import 'package:janken/component/molecule/count-text.dart';
+import 'package:janken/component/molecule/increment-button.dart';
 import 'package:janken/controller/counterController.dart';
 import 'package:janken/domain/counter.dart';
 import 'package:provider/provider.dart';
