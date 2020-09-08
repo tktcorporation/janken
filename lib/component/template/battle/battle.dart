@@ -8,7 +8,8 @@ import 'package:janken/domain/counter.dart';
 class BattlePage extends StatelessWidget {
   BattlePage(this._title);
   final String _title;
-  final counterProvider = ChangeNotifierProvider<CounterController>((_) => CounterController(Counter()));
+  final counterProvider = ChangeNotifierProvider<CounterController>(
+      (_) => CounterController(Counter()));
 
   @override
   Widget build(BuildContext context) {
@@ -21,13 +22,13 @@ class BattlePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Consumer(
-                builder: (_, watch, __) => CountText(watch(counterProvider).getCount()),
+                builder: (_, watch, __) =>
+                    CountText(watch(counterProvider).getCount()),
               )
             ],
           ),
         ),
-        floatingActionButton: 
-              IncrementButton(context.read(counterProvider).increment)
-    );
+        floatingActionButton:
+            IncrementButton(context.read(counterProvider).increment));
   }
 }
