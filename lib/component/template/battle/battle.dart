@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:janken/component/molecule/count-text.dart';
-import 'package:janken/component/molecule/increment-button.dart';
-import 'package:janken/controller/counterController.dart';
+import 'package:janken/component/molecule/count_text.dart';
+import 'package:janken/component/molecule/increment_button.dart';
+import 'package:janken/controller/counter_controller.dart';
 import 'package:janken/domain/counter.dart';
 
 class BattlePage extends StatelessWidget {
