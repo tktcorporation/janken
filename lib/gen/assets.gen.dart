@@ -21,6 +21,8 @@ class $AssetsImagesJankenGen {
   SvgGenImage get jankenTriangle =>
       const SvgGenImage('assets/images/janken/janken_triangle.svg');
   SvgGenImage get pa => const SvgGenImage('assets/images/janken/pa.svg');
+  AssetGenImage get trianglePng =>
+      const AssetGenImage('assets/images/janken/triangle_png.png');
 }
 
 class Assets {

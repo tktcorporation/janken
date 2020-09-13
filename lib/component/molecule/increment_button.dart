@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:janken/gen/assets.gen.dart';
 
 typedef void IncrementCallback();
 
@@ -9,10 +10,22 @@ class IncrementButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FloatingActionButton(
+    return RaisedButton(
       onPressed: this._increment,
-      tooltip: 'Increment',
-      child: Icon(Icons.add),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10.0),
+      ),
+      color: Colors.orange,
+      child: Container(
+        width: 180,
+        height: 180,
+        decoration: BoxDecoration(
+          // color: Colors.orange,
+          image: DecorationImage(
+              image: AssetImage(Assets.images.janken.trianglePng.path),
+              fit: BoxFit.scaleDown),
+        ),
+      ),
     );
   }
 }
