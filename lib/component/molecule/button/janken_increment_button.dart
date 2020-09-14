@@ -3,8 +3,8 @@ import 'package:janken/gen/assets.gen.dart';
 
 typedef void IncrementCallback();
 
-class IncrementButton extends StatelessWidget {
-  const IncrementButton(this._increment);
+class JankenIncrementButton extends StatelessWidget {
+  const JankenIncrementButton(this._increment);
 
   final IncrementCallback _increment;
 
