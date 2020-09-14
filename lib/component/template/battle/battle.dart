@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:janken/component/molecule/animation/animation_controller.dart';
 import 'package:janken/component/molecule/button/janken_increment_button.dart';
 import 'package:janken/component/molecule/count_text.dart';
 import 'package:janken/controller/counter_controller.dart';
@@ -24,7 +25,8 @@ class BattlePage extends StatelessWidget {
               Consumer(
                 builder: (_, watch, __) =>
                     CountText(watch(counterProvider).getCount()),
-              )
+              ),
+              Roulette(),
             ],
           ),
         ),

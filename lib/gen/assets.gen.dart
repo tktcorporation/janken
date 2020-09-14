@@ -17,10 +17,16 @@ class $AssetsImagesJankenGen {
   const $AssetsImagesJankenGen();
 
   SvgGenImage get choki => const SvgGenImage('assets/images/janken/choki.svg');
+  AssetGenImage get chokiPng =>
+      const AssetGenImage('assets/images/janken/choki_png.png');
+  AssetGenImage get handPng =>
+      const AssetGenImage('assets/images/janken/hand_png.png');
   SvgGenImage get hands => const SvgGenImage('assets/images/janken/hands.svg');
   SvgGenImage get jankenTriangle =>
       const SvgGenImage('assets/images/janken/janken_triangle.svg');
   SvgGenImage get pa => const SvgGenImage('assets/images/janken/pa.svg');
+  AssetGenImage get paPng =>
+      const AssetGenImage('assets/images/janken/pa_png.png');
   AssetGenImage get trianglePng =>
       const AssetGenImage('assets/images/janken/triangle_png.png');
 }
