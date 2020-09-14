@@ -20,7 +20,6 @@ class IncrementButton extends StatelessWidget {
         width: 180,
         height: 180,
         decoration: BoxDecoration(
-          // color: Colors.orange,
           image: DecorationImage(
               image: AssetImage(Assets.images.janken.trianglePng.path),
               fit: BoxFit.scaleDown),
